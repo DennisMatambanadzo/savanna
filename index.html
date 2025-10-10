@@ -9,21 +9,33 @@
   <title>savanna</title>
 </head>
 
-<body class="min-h-screen flex flex-col bg-gray-50">
-  <header class="bg-white  p-4 md:p-6">
-    <!-- <nav class="max-w-6xl mx-auto flex justify-between items-center"> -->
-    <!-- <div class="text-xl font-bold">Logo</div> -->
-    <!-- <ul class="hidden md:flex gap-6"> -->
-    <!-- <li><a href="#" class="hover:text-blue-600">Home</a></li> -->
-    <!-- <li><a href="#" class="hover:text-blue-600">About</a></li> -->
-    <!-- <li><a href="#" class="hover:text-blue-600">Contact</a></li> -->
-    <!-- </ul> -->
-    <!-- mobile menu button -->
-    <!-- <button class="md:hidden">☰</button> -->
-    <!-- </nav> -->
+<body class="min-h-screen flex flex-col bg-gray-50 relative overflow-hidden">
+  <header id="header" class="bg-red-400  p-4 md:p-6">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold">Logo</div>
+      <ul class="hidden md:flex gap-6">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600">About</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+      mobile menu button
+      <button id="menu" class="md:hidden">☰</button>
+    </nav>
   </header>
 
+
+  <section id="overlay" class="backdrop-grayscale-75 backdrop-blur-xs
+     min-h-screen min-w-screen z-10 absolute hidden
+         transition-all transition-discrete duration-150 ease-in-out">
+  </section>
+  <section id="cart"
+    class="z-20 min-h-screen absolute -right-full min-w-lg transition transition-discrete duration-150 ease-in-out ">
+
+    <div id="cart-close" class="cursor-pointer">x</div>
+  </section>
   <main class="flex-1">
+
+
     <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
         <div class="bg-gray-200">.</div>
@@ -36,6 +48,8 @@
     <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
     </section>
+
+
   </main>
   <script type="module" src="/src/main.js"></script>
 </body>
