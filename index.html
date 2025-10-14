@@ -1,57 +1,80 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/style.css">
-  <title>savanna</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <title>savanna</title>
+  </head>
 
-<body class="min-h-screen flex flex-col bg-gray-50 relative overflow-hidden">
-  <header id="header" class="bg-red-50  p-4 md:p-6">
-    <nav class="max-w-6xl mx-auto flex justify-between items-center">
-      <div class="text-xl font-bold">Logo</div>
-      <ul class="hidden md:flex gap-6">
+  <body class="min-h-screen flex flex-col bg-gray-50 relative overflow-hidden">
+    <header id="header" class="  p-4 md:p-6">
+
+      <nav class="max-w-6xl mx-auto flex justify-center relative ">
+        <i class="ri-menu-line absolute left-4 md:hidden" id="menu-btn"></i>
+        <ul
+          id="menu"
+          class="md:flex gap-6 absolute min-h-screen hidden md:left-4">
+          <li><a href="#" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="hover:text-blue-600">About</a></li>
+          <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+        <!-- logo -->
+        <div class="text-xl font-bold">Logo</div>
+        <!-- cart icon -->
+        <i id="cart-btn" class="ri-shopping-bag-line absolute right-4"></i>
+      </nav>
+    </header>
+
+    <section id="overlay" class="backdrop-grayscale-75 backdrop-blur-xs
+     min-h-screen min-w-screen z-10 absolute hidden
+         transition-all transition-discrete duration-150 ease-in-out">
+    </section>
+
+    <section id="menu-mobile"
+      class="z-30 min-h-screen absolute -left-full  w-full transition transition-discrete duration-150 ease-in-out ">
+      <ul
+        id
+        class="gap-6 flex flex-col p-6 mt-16 text-center justify-self-center">
         <li><a href="#" class="hover:text-blue-600">Home</a></li>
         <li><a href="#" class="hover:text-blue-600">About</a></li>
         <li><a href="#" class="hover:text-blue-600">Contact</a></li>
       </ul>
-      mobile menu button
-      <button id="menu" class="md:hidden">☰</button>
-    </nav>
-  </header>
-
-
-  <section id="overlay" class="backdrop-grayscale-75 backdrop-blur-xs
-     min-h-screen min-w-screen z-10 absolute hidden
-         transition-all transition-discrete duration-150 ease-in-out">
-  </section>
-  <section id="cart"
-    class="z-20 min-h-screen absolute -right-full min-w-lg transition transition-discrete duration-150 ease-in-out ">
-
-    <div id="cart-close" class="cursor-pointer">x</div>
-  </section>
-  <main class="flex-1">
-
-
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-        <div class="bg-gray-200">.</div>
-        <div class="bg-gray-200">.</div>
-        <div class="bg-gray-200">.</div>
-        <div class="bg-gray-200">.</div>
-        <div class="bg-gray-200">.</div>
-      </div>
+      <i id="close-menu" class="ri-close-fill absolute right-8 top-4"></i>
     </section>
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-
+    <section id="cart"
+      class="z-30 min-h-screen absolute -right-full w-full transition transition-discrete duration-150 ease-in-out ">
+      <ul
+        id
+        class="gap-6 flex flex-col p-6 mt-16 text-center justify-self-center">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600">About</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+      <i id="close-cart" class="ri-close-fill absolute right-8 top-4"></i>
     </section>
+    <main class="flex-1">
 
+      <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+          <div class="bg-gray-200">.</div>
+          <div class="bg-gray-200">.</div>
+          <div class="bg-gray-200">.</div>
+          <div class="bg-gray-200">.</div>
+          <div class="bg-gray-200">.</div>
+        </div>
+      </section>
+      <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-  </main>
-  <script type="module" src="/src/main.js"></script>
-</body>
+      </section>
+
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 
 </html>
