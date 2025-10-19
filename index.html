@@ -14,7 +14,6 @@
 
   <body class="min-h-screen flex flex-col bg-gray-50 relative overflow-hidden">
     <header id="header" class="  p-4 md:p-6">
-
       <nav class="max-w-6xl mx-auto flex justify-center relative ">
         <i class="ri-menu-line absolute left-4 md:hidden" id="menu-btn"></i>
         <ul
@@ -25,19 +24,20 @@
           <li><a href="#" class="hover:text-blue-600">Contact</a></li>
         </ul>
         <!-- logo -->
-        <div class="text-xl font-bold">Logo</div>
+        <div class="text-xl md:text-2xl font-bold">Logo</div>
         <!-- cart icon -->
-        <i id="cart-btn" class="ri-shopping-bag-line absolute right-4"></i>
+        <i id="cart-btn"
+          class="ri-shopping-bag-line absolute right-4 hidden"></i>
       </nav>
     </header>
 
-    <section id="overlay" class="backdrop-grayscale-75 backdrop-blur-xs
-     min-h-screen min-w-screen z-10 absolute hidden
+    <section id="overlay" class="backdrop-blur-lg
+    z-10 fixed hidden inset-0
          transition-all transition-discrete duration-150 ease-in-out">
     </section>
 
     <section id="menu-mobile"
-      class="z-30 min-h-screen absolute -left-full  w-full transition transition-discrete duration-150 ease-in-out ">
+      class="z-30 fixed inset-0 -left-full  w-full transition transition-discrete duration-150 ease-in-out ">
       <ul
         id
         class="gap-6 flex flex-col p-6 mt-16 text-center justify-self-center">
@@ -47,7 +47,7 @@
       </ul>
       <i id="close-menu" class="ri-close-fill absolute right-8 top-4"></i>
     </section>
-    <section id="cart"
+    <!-- <section id="cart"
       class="z-30 min-h-screen absolute -right-full w-full transition transition-discrete duration-150 ease-in-out ">
       <ul
         id
@@ -57,9 +57,8 @@
         <li><a href="#" class="hover:text-blue-600">Contact</a></li>
       </ul>
       <i id="close-cart" class="ri-close-fill absolute right-8 top-4"></i>
-    </section>
+    </section> -->
     <main class="flex-1">
-
       <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
           <div class="bg-gray-200">.</div>
